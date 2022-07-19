@@ -1,12 +1,29 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <Header />
   </nav>
-  <router-view/>
+  <div class="page-content">
+    <router-view />
+  </div>
+  <Footer />
 </template>
-
+<script>
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+export default {
+  name: "AppView",
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
 <style lang="scss">
+body {
+  /* background: #191919;
+  color: #fff; */
+  // height: 3000px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +32,7 @@
   color: #2c3e50;
 }
 
-nav {
+/* nav {
   padding: 30px;
 
   a {
@@ -26,5 +43,5 @@ nav {
       color: #42b983;
     }
   }
-}
+} */
 </style>
